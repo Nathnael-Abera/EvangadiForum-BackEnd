@@ -13,8 +13,9 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
 app.use(cors({
     origin: 'http://localhost:5174',
-    origin: 'https://6f7bbcb7.evangadiforum-frontend-72c.pages.dev/'
+    origin: 'https://6eebdb0e.evangadiforum-frontend-72c.pages.dev/'
 }));
+response.setHeader("Access-Control-Allow-Origin", "https://6eebdb0e.evangadiforum-frontend-72c.pages.dev");
 
 app.use('/api/users', UserRouter);
 app.use('/api/question', questionRouter);
