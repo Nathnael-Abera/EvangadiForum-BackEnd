@@ -6,11 +6,15 @@ const answerRouter = require('./server/api/answer/answer.router')
 const cors = require('cors')
 require('dotenv').config();
 const app = express();
-const port = process.env.PORT||3000;
+const port = process.env.PORT||3000||80;
 
 app.use(cors());
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
+app.use(cors({
+    origin: 'http://localhost:5174',
+    origin: 'https://6f7bbcb7.evangadiforum-frontend-72c.pages.dev/'
+}));
 
 app.use('/api/users', UserRouter);
 app.use('/api/question', questionRouter);
