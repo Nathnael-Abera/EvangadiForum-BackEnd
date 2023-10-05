@@ -25,7 +25,7 @@ module.exports = {
                     register(req.body, (err, result) => {
                         if (err) 
                         {
-                            return res.status(500).json({ msg: 'Database conection error' })
+                            return res.status(500).json({ msg: '1111Database conection error' })
                         }
                         pool.query(`SELECT * FROM registration WHERE registration.user_email = ?`,[email],
                             (err, result) => {
@@ -39,7 +39,7 @@ module.exports = {
                                 profile(req.body, (err, result) => {
                                     if (err) {
                                         console.log(err)
-                                        return res.status(500).json({ msg: 'Database conection error' })
+                                        return res.status(500).json({ msg: '2222Database conection error' })
                                     }
                                     
                                     return res.status(201).json({
