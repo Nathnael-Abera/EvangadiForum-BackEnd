@@ -16,6 +16,7 @@ module.exports = {
         }
         registerQuestion(req.body, (err, result) => {
             if (err) {
+                console.log(err)
               return  res.status(500).json({msg:'Database connection error'})
             }
               return  res.status(201).json({msg:'Qustion have been create sussesfully',data:result})
