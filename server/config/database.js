@@ -23,6 +23,7 @@ let registration = `CREATE TABLE if not exists registration(
 
 let profile = `CREATE TABLE if not exists profile(
     user_profile_id int auto_increment,
+    user_id int not null,
     first_name varchar(255) not null,
     last_name varchar(255) not null,
     user_password varchar(255) not null,
