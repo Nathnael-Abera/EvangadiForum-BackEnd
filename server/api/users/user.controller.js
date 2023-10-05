@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 module.exports = {
     createUser: (req, res) => {
         const { userName, firstName, lastName, email,password } = req.body;
-        const validPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$/.test(password);
+        const validPassword = 1;
         // console.log(req.body)
         if (!userName || !firstName || !lastName || !email || !password)
             return res.status(400).json({ msg: 'Not all fildes have been provideded!' })
